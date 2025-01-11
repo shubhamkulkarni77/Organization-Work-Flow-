@@ -1,0 +1,46 @@
+
+<app-header></app-header>
+<!-- code here html -->
+<div class="container mt-5">
+    <h2 class="text-center">Employee Form</h2>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input [(ngModel)]="addData.name" type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+           <input [(ngModel)]="addData.status" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label for="department" class="form-label">Department</label>
+            <input [(ngModel)]="addData.department" type="text" class="form-control" id="department" placeholder="Enter your department">
+        </div>
+
+        <div class="mb-3">
+            <label for="mobileno" class="form-label">Mobile No</label>
+            <input [(ngModel)]="addData.mobileno" type="tel" class="form-control" id="mobileno" placeholder="Enter mobile number">
+        </div>
+
+        <div class="mb-3">
+            <label for="emailid" class="form-label">Email ID</label>
+            <input [(ngModel)]="addData.emailid" type="email" class="form-control" id="emailid" placeholder="Enter your email">
+        </div>
+
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary</label>
+            <input [(ngModel)]="addData.salary" type="number" class="form-control" id="salary" placeholder="Enter your salary">
+        </div>
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <select [(ngModel)]="addData.country" class="form-select" id="country">
+                <option [ngValue]="item" *ngFor="let item of allcountry" >{{item.cname}}</option>
+              
+            </select>
+        </div>
+
+        <button  (click)="onSubmit()" type="submit" class="btn btn-primary">Submit</button>
+</div>
